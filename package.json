@@ -1,0 +1,24 @@
+{
+  "name": "cognitoolkit",
+  "version": "1.0.0",
+  "description": "Everyman's Cognitive Toolkit",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/http-server/bin/http-server -a localhost -p 8000 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wocoburguesa/cognitoolkit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wocoburguesa/cognitoolkit/issues"
+  },
+  "homepage": "https://github.com/wocoburguesa/cognitoolkit#readme",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "http-server": "^0.9.0"
+  }
+}

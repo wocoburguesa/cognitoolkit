@@ -17,7 +17,7 @@
         <h6 class="col-sm-2">Inspired by Gabriel Weinberg's article about cognitive models</h6>
       </div>
       <div class="row">
-        <p class="col-sm-12">Do you need to land an idea? We have the right tool for you. Check over 150 cognitive models people have used over centuries organized by themes and frequency of use. We hope you get inspired!</p>
+        <p class="col-sm-12">Do you need to land an idea? We have the right tool for you. Check over 150 cognitive models people have used over centuries organized by topics and frequency of use. We hope you get inspired!</p>
       </div>
       <div class="row">
         <h4 class="col-sm-12">Instructions</h4>
@@ -26,7 +26,7 @@
         <p class="col-sm-12">Use the filters to navigate between the different models. Use the find out more button to access extra information about each model.</p>
       </div>
       <div class="row">
-        <h4 class="col-sm-2">Themes:</h4>
+        <h4 class="col-sm-2">Topics:</h4>
         <p class="col-sm-10"> Organize the models according to common subjects of use</p>
       </div>
       <div class="row">
@@ -37,7 +37,7 @@
 
     <div class="block_1"></div> <hr />
 
-    <section class="container" ng-controller="ModelsCtrl">
+    <section class="container" ng-controller="ModelsCtrl as $ctrl">
       <div class="row">
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
@@ -47,10 +47,12 @@
         </form>
       </div>
       <div class="row">
-        <h4 class="col-sm-2">Themes:</h4>
+        <h4 class="col-sm-2">Topics:</h4>
         <div class="dropdown col-sm-2">
-          <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown">Choose the search theme
-            <span class="caret"></span></button>
+          <select ng-model="$ctrl.currentTopic"
+                  ng-options="topic as topic for topic in $ctrl.topics">
+            Choose a search topic
+          </select>
           <ul class="dropdown-menu">
             <li><a href="#">Strategy</a></li>
             <li><a href="#">Military</a></li>
@@ -59,18 +61,27 @@
         </div>
         <h6 class="col-sm-2">Frequency of use</h6>
         <div class="col-sm-6">
-          <label class="checkbox-inline col-sm-2"><input type="checkbox" value="">High</label>
-          <label class="checkbox-inline col-sm-2"><input type="checkbox" value="">Medium</label>
-          <label class="checkbox-inline col-sm-2"><input type="checkbox" value="">Low</label>
+          <label class="checkbox-inline col-sm-2">
+            <input type="checkbox" ng-model="$ctrl.frequencyFilter.high">High</label>
+          <label class="checkbox-inline col-sm-2">
+            <input type="checkbox" ng-model="$ctrl.frequencyFilter.medium">Medium</label>
+          <label class="checkbox-inline col-sm-2">
+            <input type="checkbox" ng-model="$ctrl.frequencyFilter.low">Low</label>
         </div>
       </div>
-    </section>
-    <section class="container">
+
+      <div class="col-sm-4 model" ng-repeat="model in $ctrl.models"
+           ng-show="$ctrl.shouldShow(model)">
+        <h4>{{ model.nombre }}</h4>
+        <p>{{ model.descripcion }}</p>
+        <a href="{{ model.enlace }}" target="_blank"><button type="button" class="btn btn-default">Find out more</button></a>
+      </div>
     </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/services.js"></script>
+    <script src="scripts/constants.js"></script>
     <script src="scripts/controllers.js"></script>
   </body>
 </html>
