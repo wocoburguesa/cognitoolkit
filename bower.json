@@ -1,0 +1,15 @@
+{
+  "name": "cognitoolkit",
+  "description": "Everyman's Cognitive Toolkit",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "https://github.com/wocoburguesa/cognitoolkit",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
