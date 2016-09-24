@@ -1,0 +1,132 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #333333;
+}
+
+.jumbotron {
+  height: 800px;
+  background: url("http://s3.amazonaws.com/codecademy-content/projects/broadway/bg.jpg");
+  background-size: cover;   
+}
+
+.jumbotron h1 {
+  padding-top: 80px;
+}
+
+.nav {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.nav li {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+   display: inline;
+  padding-left: 10px;
+}
+
+.nav li:first-child {
+  padding-left: 50px;
+}
+
+.jumbotron {
+  position: relative;
+  text-align: center;
+}
+
+.jumbotron h1 {
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 70px;
+  margin-top: 0;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.btn-main {
+  background-color: #333333;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.supporting {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background-color: white;
+}
+
+.supporting .col {
+  float: left;
+  width: 33%;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  background-color: white;
+}
+
+.supporting img {
+  height: 32px;
+}
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  margin-top: 250px;
+}
+
+.footer p {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-left: 50px; 
+}
+
+.btn-default {
+  border: 1px;
+  padding:  16px 10px;
+  text-decoration: none;
+  border-color: black;
+  color: black;
+  text-transform: uppercase;
+  border-style: solid;
+  font-size: 9px;
+}
+
+@media (max-width: 500px) {
+  .main h1 {
+    font-size: 50px;
+    padding: 0 40px;
+  }
+
+  .supporting .col {
+    width: 100%;
+  }
+}
