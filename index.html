@@ -63,7 +63,9 @@
       <div class="row">
         <form class="navbar-form navbar-left" role="search">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="">
+            <input type="text" class="form-control" placeholder=""
+                   ng-model="$ctrl.searchQuery"
+                   ng-change="$ctrl.search()">
           </div>
           <button type="submit" class="btn btn-default">Search</button>
         </form>
@@ -93,7 +95,7 @@
       </div>
 
       <div class="col-sm-4 model" ng-repeat="model in $ctrl.models"
-           ng-show="$ctrl.shouldShow(model)">
+           ng-show="$ctrl.shouldShow(model) && !model.hide">
         <h4>{{ model.nombre }}</h4>
         <p>{{ model.descripcion }}</p>
         <a href="{{ model.enlace }}" target="_blank"><button type="button" class="btn btn-default">Find out more</button></a>
