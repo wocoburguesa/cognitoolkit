@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
 
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css" integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj" crossorigin="anonymous">
   </head>
 
   <body ng-app="cognitoolkit">
@@ -94,16 +94,19 @@
         </div>
       </div>
 
-      <div class="col-sm-4 model" ng-repeat="model in $ctrl.models"
+      <div class="card-columns">
+        <div class="card card-block model" ng-repeat="model in $ctrl.models"
            ng-show="$ctrl.shouldShow(model) && !model.hide">
-        <h4>{{ model.nombre }}</h4>
-        <p>{{ model.descripcion }}</p>
-        <a href="{{ model.enlace }}" target="_blank"><button type="button" class="btn btn-default">Find out more</button></a>
+            <h4 class="card-title">{{ model.nombre }}</h4>
+            <p class="card-text">{{ model.descripcion }}</p>
+          <a href="{{ model.enlace }}" target="_blank"><button type="button" class="btn btn-default">Find out more</button></a>
+        </div>
       </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="sha384-VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/services.js"></script>
     <script src="scripts/constants.js"></script>
