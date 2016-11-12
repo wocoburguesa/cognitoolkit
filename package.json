@@ -4,7 +4,7 @@
   "description": "Everyman's Cognitive Toolkit",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/http-server/bin/http-server -a localhost -p 8000 -c-1",
+    "start": ".\\node_modules\\http-server\\bin\\http-server -a localhost -p 8000 -c-1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
