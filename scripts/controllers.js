@@ -109,6 +109,7 @@
 
             $ctrl.search = function () {
                 var words = $ctrl.searchQuery.split(' ');
+                var empty = true;
 
                 if (!$ctrl.searchQuery || !searchMap) {
                     for (var i = 0; i < $ctrl.models.length; i++) {
@@ -123,6 +124,12 @@
                 for (var i = 0; i < words.length; i++) {
                     searchSingleWord(words[i]);
                 }
+
+                for (var i = 0; i < $ctrl.models.length; i++) {
+                    empty = empty && $ctrl.models[i].hide;
+                }
+
+                $ctrl.showNoModels = empty;
             };
 
             $("#jumpTo").on("click", function(e) {

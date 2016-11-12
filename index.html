@@ -60,19 +60,21 @@
     <br>
 
     <section id="searchSection" class="container" ng-controller="ModelsCtrl as $ctrl">
-      <div class="row">
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder=""
-                   ng-model="$ctrl.searchQuery"
-                   ng-change="$ctrl.search()">
-          </div>
-          <button type="submit" class="btn btn-default">Search</button>
-        </form>
-      </div>
-      <div class="row">
-        <h4 class="col-sm-2">Topics:</h4>
-        <div class="dropdown col-sm-2">
+      <div class="row light-letters">
+        <div class="dropdown col-sm-4">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder=""
+                     ng-model="$ctrl.searchQuery"
+                     ng-enter="$ctrl.search()">
+              <button type="button" class="btn btn-default"
+                      ng-click="$ctrl.search()">Search</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="dropdown col-sm-4 topics">
+          <label class="big-label">Topics</label>
           <select ng-model="$ctrl.currentTopic"
                   ng-options="topic as topic for topic in $ctrl.topics">
             Choose a search topic
@@ -83,24 +85,30 @@
             <li><a href="#">Business</a></li>
           </ul>
         </div>
-        <h6 class="col-sm-2">Frequency of use</h6>
-        <div class="col-sm-6">
-          <label class="checkbox-inline col-sm-2">
-            <input type="checkbox" ng-model="$ctrl.frequencyFilter.high">High</label>
-          <label class="checkbox-inline col-sm-2">
-            <input type="checkbox" ng-model="$ctrl.frequencyFilter.medium">Medium</label>
-          <label class="checkbox-inline col-sm-2">
-            <input type="checkbox" ng-model="$ctrl.frequencyFilter.low">Low</label>
+
+        <div class="col-sm-4">
+          <label class="big-label">Frequency of use</label>
+          <div class="frequency-checkboxes">
+            <label class="checkbox-inline">
+              <input type="checkbox" ng-model="$ctrl.frequencyFilter.high">High</label>
+            <label class="checkbox-inline">
+              <input type="checkbox" ng-model="$ctrl.frequencyFilter.medium">Medium</label>
+            <label class="checkbox-inline">
+              <input type="checkbox" ng-model="$ctrl.frequencyFilter.low">Low</label>
+          </div>
         </div>
       </div>
 
-      <div class="card-columns">
+      <div ng-if="!$ctrl.showNoModels" class="card-columns">
         <div class="card card-block model" ng-repeat="model in $ctrl.models"
            ng-show="$ctrl.shouldShow(model) && !model.hide">
             <h4 class="card-title">{{ model.nombre }}</h4>
             <p class="card-text">{{ model.descripcion }}</p>
           <a href="{{ model.enlace }}" target="_blank"><button type="button" class="btn btn-default">Find out more</button></a>
         </div>
+      </div>
+      <div ng-if="$ctrl.showNoModels" class="no-results">
+        <p>No results found. Try using a different search query.</p>
       </div>
     </section>
 
@@ -111,6 +119,7 @@
     <script src="scripts/services.js"></script>
     <script src="scripts/constants.js"></script>
     <script src="scripts/controllers.js"></script>
+    <script src="scripts/directives.js"></script>
 
     <footer>
       &copy; Brought to you by Software & Sons
