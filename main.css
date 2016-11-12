@@ -67,8 +67,8 @@ a {
   margin: 0;
   width: 100%;
   padding: 55px;
-  background-color: #97ABB6;
-  max-width: none;
+  background-image: url("./img/denim.png");
+  max-width: none;  
 }
 
 .model p {
