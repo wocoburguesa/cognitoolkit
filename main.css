@@ -21,6 +21,11 @@ html, body {
   transition: box-shadow 0.5s;
 }
 
+#jumpTo {
+    color: #dedede;
+    font-weight: 600;
+}
+
 h1, h2, a {
   font-family: 'Oswald', sans-serif;
   color: #333;
