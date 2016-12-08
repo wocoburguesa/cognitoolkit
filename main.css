@@ -132,3 +132,9 @@ footer {
 .no-results {
     color: #ddd;
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .main {
+        background-position: 40%;
+    }
+}
