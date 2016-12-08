@@ -12,6 +12,7 @@ html, body {
   height: 550px;
   padding-top: 55px;
   background: url(https://s3.amazonaws.com/codecademy-content/projects/shutterbugg/intro.jpg);
+  background-size: cover;
 }
 
 .main .btn {
