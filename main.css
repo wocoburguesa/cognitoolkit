@@ -37,6 +37,15 @@ h1 {
   margin-bottom: 20px;
 }
 
+.instructions {
+  text-align: center;
+}
+
+.conteimg > img {
+  height: 100px;
+  width: 100px;
+}
+
 .imagenmedio {
   margin-left: -160px;
 }
