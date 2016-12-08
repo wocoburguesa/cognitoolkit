@@ -39,7 +39,7 @@ h1 {
 
 .instructionsparent {
   padding-top:50px;
-  margin:auto;
+  margin:auto !important;
 }
 
 .instructions {
