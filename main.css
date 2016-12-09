@@ -94,7 +94,7 @@ a {
     height: 40px;
     vertical-align: middle;
     position: absolute;
-    right: 30px;
+    right: 25px;
     top: 10px;
 }
 
@@ -137,12 +137,28 @@ footer {
 }
 
 #searchSection .form-control {
-    width: 70%;
+    width: 78%;
     display: inline-block;
 }
 
 .no-results {
     color: #ddd;
+}
+
+.search-bar {
+    padding-right: 4px !important;
+}
+
+.search-bar form {
+    width: 100%;
+}
+
+.dropdown select{
+    width: 82.3% !important;
+}
+
+.frequency-checker {
+    padding-left: 8px !important;
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
