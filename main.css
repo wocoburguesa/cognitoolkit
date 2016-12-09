@@ -115,8 +115,8 @@ a {
 }
 
 .card-title > a {
-  color:#0000;
-  text-decoration:none;
+  color:#000;
+  text-decoration:none !important;
   font-weight:600;
 }
 
