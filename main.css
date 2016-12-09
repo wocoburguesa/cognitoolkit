@@ -114,6 +114,12 @@ a {
   border-radius: .25rem;
 }
 
+.card-title > a {
+  color:#0000;
+  text-decoration:none;
+  font-weight:600;
+}
+
 footer {
     position: fixed;
     bottom: 10px;
