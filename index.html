@@ -106,7 +106,7 @@
       <div ng-if="!$ctrl.showNoModels" class="card-columns">
         <div class="card card-block model" ng-repeat="model in $ctrl.models"
            ng-show="$ctrl.shouldShow(model) && !model.hide">
-            <h4 class="card-title">{{ model.nombre }}</h4>
+          <h4 class="card-title"><a href="{{ model.enlace }}" target="_blank">{{ model.nombre }}</a></h4>
             <p class="card-text">{{ model.descripcion }}</p>
           <a href="{{ model.enlace }}" target="_blank"><button type="button" class="btn btn-default">Find out more</button></a>
         </div>
